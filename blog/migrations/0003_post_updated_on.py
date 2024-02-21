@@ -6,12 +6,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0002_postal_delete_post'),
+        ('blog', '0002_post_delete_post'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='postal',
+            model_name='post',
             name='updated_on',
             field=models.DateTimeField(auto_now=True),
         ),
