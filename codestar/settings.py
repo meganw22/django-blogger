@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '3r^&@_-8q)j=xj=2-y=^*3!-+#i@@r)@!6h9f@y!ym=x(0c-b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-meganw22-djangoblogger-6w40d8ndffg.ws-eu108.gitpod.io', 
