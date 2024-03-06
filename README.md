@@ -2,15 +2,20 @@ when restarting this database:
 
 type `pip3 list` to check all currently installed packages
 
-install the following packages and remove those not required:
-`pip3 install asgiref==3.7.2 dj-database-url==0.5.0 Django==4.2.1 gunicorn==20.1.0 psycopg2==2.9.9 sqlparse==0.4.4`
+install all the packages listed in the requirements.txt
 
 create an env.py file and add the following:
+{
+    import os
 
-import os
+    os.environ.setdefault(
+        "DATABASE_URL", "<copy-this-url-from-elephant-sql-details>")
 
-os.environ.setdefault(
-    "DATABASE_URL", "<copy-this-url-from-elephant-sql-details>")
+    os.environ.setdefault(
+        "SECRET_KEY", "<your_choice_of_secret_key>")
+}
 
-os.environ.setdefault(
-    "SECRET_KEY", "<your_choice_of_secret_key>")
+create a fixture folder in the blog app:
+    create a posts.json file in the fixtures folder. import data through terminal command : `python3 manage.py loaddata blog/fixtures/posts.json`
+
+
